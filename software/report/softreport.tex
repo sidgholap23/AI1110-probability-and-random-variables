@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{titlesec}
+\usepackage{graphicx}
+
+\title{Randomized Music Player: A Python Project}
+\author{Gholap Siddhesh Ashok\\AI22BTECH11007}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+This report presents a Python project that implements a randomized music player capable of shuffling and playing a given set of 20 songs. The project utilizes the pygame library for audio playback and incorporates user-friendly controls for song progression. The code ensures that all songs are played before repeating the process with a new random order, providing a dynamic and engaging music listening experience.
+
+\section{Introduction}
+The objective of this project is to develop a Python program that functions as a music player capable of randomizing and playing a collection of 20 songs. The project employs the pygame library for audio playback and incorporates essential technical aspects to ensure a smooth and reliable music player.
+
+\section{Methodology}
+The project follows a detailed methodology to achieve the desired functionality:
+
+\subsection{Library and Environment Setup}
+The pygame library, a popular Python module for multimedia applications, is used for audio playback. It must be installed and configured correctly to enable the program's functionality.
+
+\subsection{Song List Initialization}
+The Python code initializes a list of 20 songs, representing file paths to audio files. These songs should be stored in a format supported by the pygame.mixer.music module, which in this case was .mp3 format.
+
+\subsection{Shuffling Algorithm}
+The \texttt{random.shuffle()} function from the \texttt{random} module is utilized to randomize the order of the songs. This ensures that each playback session presents a different sequence of songs. The algorithm assigns a random index to each song and rearranges them accordingly.
+
+\subsection{Audio Playback Control}
+The \texttt{pygame.mixer.music.load()} function loads each song into the mixer module, preparing it for playback. The \texttt{pygame.mixer.music.play()} function starts the playback of the current song.
+
+\subsection{User Interaction}
+During song playback, the program prompts the user for input, specifically the 'n' key. This input is captured using the \texttt{input()} function, allowing the user to control the progression to the next song. Upon receiving the 'n' input, \texttt{pygame.mixer.music.stop()} is called to stop the current song and proceed to the next one.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{/home/siddhesh/Pictures/Screenshots/Screenshot from 2023-05-18 15-17-30.png}
+    \caption{asking input(n) for new song}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Repeat Process}
+Once all the songs have been played, the program prompts the user to press Enter to play the songs again. This triggers the shuffling and playback process, generating a new random order for the songs.
+
+\section{Conclusion}
+The randomized music player project provides a simple Python program capable of shuffling and playing a set of given songs in a random order. The implementation utilizes the pygame library for audio playback and incorporates user interaction for controlling song progression. By ensuring that all songs are played before repeating the process with a new random order, the project offers a dynamic and engaging music listening experience. The program's technical considerations, such as library setup, shuffling algorithm, and audio playback control, contribute to its reliable and efficient performance. 
+
+\end{document}
+
